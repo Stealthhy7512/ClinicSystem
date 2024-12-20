@@ -31,15 +31,15 @@ public class Main {
         System.out.println(sch1.getDoctor());
         System.out.println(d1.getSchedule());
 
-        sch1.addRendezvous(p1, new Date(2024, 11, 20));
-        sch1.addRendezvous(p1, new Date(2024, 11, 21));
-        sch1.addRendezvous(p1, new Date(2024, 11, 20));
-        sch1.addRendezvous(p1, new Date(2024, 11, 20));
-        sch1.addRendezvous(p1, new Date(2024, 11, 20));
-
-
-        sch1.listSessions();
-
-        System.out.println(sch1.countSessionsForDay(new Date(2024, 11, 20)));
+//        sch1.addRendezvous(p1, new Date(2024, 11, 20));
+//        sch1.addRendezvous(p1, new Date(2024, 11, 21));
+//        sch1.addRendezvous(p1, new Date(2024, 11, 20));
+//        sch1.addRendezvous(p1, new Date(2024, 11, 20));
+//        sch1.addRendezvous(p1, new Date(2024, 11, 20));
+//
+//
+//        sch1.listSessions();
+//
+//        System.out.println(sch1.countSessionsForDay(new Date(2024, 11, 20)));
     }
 }

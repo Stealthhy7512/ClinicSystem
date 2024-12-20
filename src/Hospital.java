@@ -33,7 +33,7 @@ public class Hospital {
         return null;
     }
 
-    public void addSection(Section section) throws DuplicateInfoException {
+    public synchronized void addSection(Section section) throws DuplicateInfoException {
         if (sectionLinkedList != null) {
             for (Section sect : sectionLinkedList) {
                 if(sect.getId() == section.getId()) {

@@ -40,7 +40,7 @@ public class Schedule {
     }
 
     // TODO Adds rendezvous if max per day is not reached, else returns false; give alert in GUI if false
-    public boolean addRendezvous(Patient p, Date desiredDate) {
+    public synchronized boolean addRendezvous(Patient p, Date desiredDate) {
         if (countSessionsForDay(desiredDate) < maxPatientPerDay) {
             Rendezvous rendezvous = new Rendezvous(desiredDate, doctor, p);
             sessions.add(rendezvous);
