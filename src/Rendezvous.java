@@ -1,14 +1,17 @@
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Rendezvous {
-    private LocalDate  dateTime;
+    private Date dateTime;
+    private Doctor doctor;
+    private Patient patient;
 
-    public Rendezvous(LocalDate dateTime) {
+    public Rendezvous(Date dateTime, Doctor doctor, Patient patient) {
         this.dateTime = dateTime;
-
+        this.doctor = doctor;
+        this.patient = patient;
     }
 
-    public LocalDate getDateTime() {
+    public Date getDateTime() {
         return dateTime;
     }
 

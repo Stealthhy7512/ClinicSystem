@@ -21,7 +21,7 @@ public class Section {
                 System.out.println(doctor);
             }
         }
-        System.out.println("****************\n");
+        System.out.println("****************");
     }
 
     public Doctor getDoctor(int diplomaId) {
@@ -35,6 +35,7 @@ public class Section {
         return null;
     }
 
+    // TODO Adds doctor if unique, throws error if not unique, catch this in GUI and raise alert
     public void addDoctor(Doctor doctor) throws DuplicateInfoException {
         if (doctorLinkedList != null) {
             for (Doctor dr : doctorLinkedList) {

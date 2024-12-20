@@ -18,9 +18,28 @@ public class Main {
         h1.addSection(s1);
         h1.addSection(s2);
 
-        System.out.println(h1.getSection(1));
-        System.out.println(h1.getSection("S2"));
+        //System.out.println(h1.getSection(1));
+        //System.out.println(h1.getSection("S2"));
 
-        h1.listSections();
+        //h1.listSections();
+
+        Schedule sch1 = new Schedule(3);
+        sch1.setDoctor(d1);
+
+        Patient p1 = new Patient("patient1", 12345);
+
+        System.out.println(sch1.getDoctor());
+        System.out.println(d1.getSchedule());
+
+        sch1.addRendezvous(p1, new Date(2024, 11, 20));
+        sch1.addRendezvous(p1, new Date(2024, 11, 21));
+        sch1.addRendezvous(p1, new Date(2024, 11, 20));
+        sch1.addRendezvous(p1, new Date(2024, 11, 20));
+        sch1.addRendezvous(p1, new Date(2024, 11, 20));
+
+
+        sch1.listSessions();
+
+        System.out.println(sch1.countSessionsForDay(new Date(2024, 11, 20)));
     }
 }

@@ -8,9 +8,18 @@ public class Doctor extends Person {
         this.diplomaId = diplomaId;
     }
 
+    public Doctor(String name, long nationalId, int diplomaId, Schedule schedule) {
+        super(name, nationalId);
+        this.diplomaId = diplomaId;
+        this.setSchedule(schedule);
+    }
+
     public void setSchedule(Schedule schedule) {
         if (schedule != null) {
             this.schedule = schedule;
+            if (schedule.getDoctor() != this) {
+                schedule.setDoctor(this);
+            }
         }
     }
 
@@ -24,6 +33,7 @@ public class Doctor extends Person {
 
     @Override
     public String toString() {
-        return super.toString() + " | Diploma ID: " + diplomaId;
+        return super.toString() +
+                " | Diploma ID: " + diplomaId;
     }
 }

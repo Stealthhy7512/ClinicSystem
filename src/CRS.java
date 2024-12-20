@@ -13,7 +13,9 @@ public class CRS {
         rendezvousLinkedList = new LinkedList<>();
     }
 
-    public boolean makeRendezvous(long patientId, int hospitalId, int sectionId, int diplomaId, Date desiredDate) throws IdException {
+    // TODO Creates rendezvous if everything OK, throws exception if and of the IDs don't match; catch and raise alert in GUI
+    public boolean makeRendezvous(long patientId, int hospitalId, int sectionId, int diplomaId, Date desiredDate)
+            throws IdException {
         return false;
     }
 

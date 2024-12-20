@@ -7,6 +7,18 @@ public class Person {
         this.nationalId = nationalId;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public long getNationalId() {
+        return nationalId;
+    }
+
     @Override
     public String toString() {
         return "Name: " + name +
