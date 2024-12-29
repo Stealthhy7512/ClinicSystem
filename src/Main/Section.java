@@ -1,8 +1,9 @@
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
-import java.util.LinkedList;
+package Main;
 
-public class Section {
+import java.util.LinkedList;
+import java.io.Serializable;
+
+public class Section implements Serializable {
     private final int id;
     private String name;
     private LinkedList<Doctor> doctorLinkedList;
@@ -47,8 +48,16 @@ public class Section {
         doctorLinkedList.add(doctor);
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public int getId() {
         return id;
+    }
+
+    public LinkedList<Doctor> getDoctorLinkedList() {
+        return doctorLinkedList;
     }
 
     public String getName() {
@@ -57,7 +66,7 @@ public class Section {
 
     @Override
     public String toString() {
-        return "Section ID: " + id +
-                " | Section Name: " + name;
+        return "Main.Section ID: " + id +
+                " | Main.Section Name: " + name;
     }
 }

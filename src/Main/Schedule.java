@@ -1,8 +1,11 @@
+package Main;
+
 import java.util.Date;
 import java.util.LinkedList;
+import java.io.Serializable;
 
 
-public class Schedule {
+public class Schedule implements Serializable {
     private LinkedList<Rendezvous> sessions;
     private int maxPatientPerDay;
     private Doctor doctor;
@@ -52,7 +55,7 @@ public class Schedule {
 
     public void listSessions() {
         if (sessions != null) {
-            System.out.println("Sessions for Doctor " + doctor.getName());
+            System.out.println("Sessions for Main.Doctor " + doctor.getName());
             System.out.println("****************");
             for (Rendezvous session : sessions) {
                 System.out.println(session);
@@ -63,6 +66,10 @@ public class Schedule {
 
     public Doctor getDoctor() {
         return doctor;
+    }
+
+    public LinkedList<Rendezvous> getSessions() {
+        return sessions;
     }
 
     @Override

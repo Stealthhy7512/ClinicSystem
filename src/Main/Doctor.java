@@ -1,3 +1,4 @@
+package Main;
 
 public class Doctor extends Person {
     private final int diplomaId;
@@ -21,6 +22,10 @@ public class Doctor extends Person {
                 schedule.setDoctor(this);
             }
         }
+    }
+
+    public void setName(String name) {
+        super.setName(name);
     }
 
     public Schedule getSchedule() {

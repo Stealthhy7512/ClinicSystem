@@ -1,4 +1,8 @@
-public class Person {
+package Main;
+
+import java.io.Serializable;
+
+public class Person implements Serializable {
     private String name;
     private final long nationalId;
 

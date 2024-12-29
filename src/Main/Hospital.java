@@ -1,6 +1,9 @@
-import java.util.LinkedList;
+package Main;
 
-public class Hospital {
+import java.util.LinkedList;
+import java.io.Serializable;
+
+public class Hospital implements Serializable {
     private final int id;
     private String name;
     private LinkedList<Section> sectionLinkedList;
@@ -53,6 +56,20 @@ public class Hospital {
             }
         }
         System.out.println("****************");
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() { return name; }
+
+    public LinkedList<Section> getSectionLinkedList() {
+        return sectionLinkedList;
     }
 
     @Override
