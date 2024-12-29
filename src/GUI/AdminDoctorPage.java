@@ -52,6 +52,7 @@ public class AdminDoctorPage extends JFrame {
         editControls.add(s_id);
         s_id.setEditable(false);
         JTextField h_name = new JTextField();
+        h_name.setText(section.getName());
         editControls.add(h_name);
         editSection.add(editControls, BorderLayout.CENTER);
 
@@ -61,11 +62,12 @@ public class AdminDoctorPage extends JFrame {
         addDoctorButton.addActionListener(e -> {
             try {
                 JOptionPane.showMessageDialog(frame, addDoctor, "Add Section", JOptionPane.PLAIN_MESSAGE);
-                section.addDoctor(new Doctor(name.getText(), Long.parseLong(id.getText()), Integer.parseInt(diplomaId.getText())));
+                if (!name.getText().isEmpty() && !id.getText().isEmpty() && !diplomaId.getText().isEmpty()) {
+                    section.addDoctor(new Doctor(name.getText(), Long.parseLong(id.getText()), Integer.parseInt(diplomaId.getText())));
+                }
             } catch (DuplicateInfoException DuplicateInfoError) {
                 JOptionPane.showMessageDialog(frame, "Doctor already exists.", "Error", JOptionPane.ERROR_MESSAGE);
             }
-
         });
         this.add(addDoctorButton);
 

@@ -20,6 +20,6 @@ public class Rendezvous implements Serializable {
 
     @Override
     public String toString() {
-        return "Date: " + dateTime;
+        return dateTime.toString().substring(0, 10);
     }
 }

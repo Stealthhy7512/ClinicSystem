@@ -4,22 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40c55ea2-516b-4bb2-b350-60bc44aee3e3" name="Changes" comment="synchronized keyword added for some methods">
-      <change afterPath="$PROJECT_DIR$/src/Main/CRS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+    <list default="true" id="40c55ea2-516b-4bb2-b350-60bc44aee3e3" name="Changes" comment="Started GUI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClinicSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ClinicSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CRS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DuplicateInfoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/DuplicateInfoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Hospital.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IdException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/IdException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rendezvous.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Rendezvous.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Schedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Section.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load.ser" beforeDir="false" afterPath="$PROJECT_DIR$/load.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AdminDoctorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminDoctorPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AdminHospitalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminHospitalPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AdminSchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminSchedulePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AdminSectionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminSectionPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Rendezvous.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Rendezvous.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Section.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +134,7 @@
       <workItem from="1734734160941" duration="2938000" />
       <workItem from="1735333971641" duration="3145000" />
       <workItem from="1735351985784" duration="1982000" />
-      <workItem from="1735413362955" duration="19275000" />
+      <workItem from="1735413362955" duration="22556000" />
     </task>
     <task id="LOCAL-00001" summary="first commit to repo">
       <created>1734699329368</created>
@@ -163,7 +157,21 @@
       <option name="project" value="LOCAL" />
       <updated>1734714051280</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added some setters and getters">
+      <created>1735500087171</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735500087171</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Started GUI">
+      <created>1735500115648</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1735500115650</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +182,9 @@
     <MESSAGE value="added some TODO and corrected scheduling process with better assocation handling" />
     <MESSAGE value="added some TODO and corrected scheduling process with better association handling" />
     <MESSAGE value="synchronized keyword added for some methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="synchronized keyword added for some methods" />
+    <MESSAGE value="Added some setters and getters" />
+    <MESSAGE value="Started GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started GUI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -182,6 +192,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ClassCastException" package="java.lang" />
           <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="7" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

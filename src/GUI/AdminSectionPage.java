@@ -51,6 +51,7 @@ public class AdminSectionPage extends JFrame {
         editControls.add(h_id);
         h_id.setEditable(false);
         JTextField h_name = new JTextField();
+        h_name.setText(hospital.getName());
         editControls.add(h_name);
         editHospital.add(editControls, BorderLayout.CENTER);
 
@@ -59,9 +60,9 @@ public class AdminSectionPage extends JFrame {
         addSectionButton.setFocusable(false);
         addSectionButton.addActionListener(e -> {
             JOptionPane.showMessageDialog(frame, addSection, "Add Section", JOptionPane.PLAIN_MESSAGE);
-            hospital.addSection(new Section(Integer.parseInt(id.getText()), name.getText()));
-            System.out.println(id.getText() + " " + name.getText());
-
+            if (!id.getText().isEmpty() && !name.getText().isEmpty()) {
+                hospital.addSection(new Section(Integer.parseInt(id.getText()), name.getText()));
+            }
         });
         this.add(addSectionButton);
 

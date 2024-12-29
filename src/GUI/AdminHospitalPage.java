@@ -33,7 +33,9 @@ public class AdminHospitalPage extends JFrame {
         addHospitalButton.setFocusable(false);
         addHospitalButton.addActionListener(e -> {
             JOptionPane.showMessageDialog(frame, addHospital, "Add Hospital", JOptionPane.PLAIN_MESSAGE);
+        if (!id.getText().isEmpty() && !name.getText().isEmpty()) {
             crs.addHospital(new Hospital(Integer.parseInt(id.getText()), name.getText()));
+            }
         });
 
         manageHospitalsButton.setBounds(20, 100, 200, 50);

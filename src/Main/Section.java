@@ -36,7 +36,6 @@ public class Section implements Serializable {
         return null;
     }
 
-    // TODO Adds doctor if unique, throws error if not unique, catch this in GUI and raise alert
     public synchronized void addDoctor(Doctor doctor) throws DuplicateInfoException {
         if (doctorLinkedList != null) {
             for (Doctor dr : doctorLinkedList) {

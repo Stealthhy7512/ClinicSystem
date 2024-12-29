@@ -55,7 +55,7 @@ public class Schedule implements Serializable {
 
     public void listSessions() {
         if (sessions != null) {
-            System.out.println("Sessions for Main.Doctor " + doctor.getName());
+            System.out.println("Sessions for Doctor " + doctor.getName());
             System.out.println("****************");
             for (Rendezvous session : sessions) {
                 System.out.println(session);
@@ -70,6 +70,10 @@ public class Schedule implements Serializable {
 
     public LinkedList<Rendezvous> getSessions() {
         return sessions;
+    }
+
+    public int getMaxPatientPerDay() {
+        return maxPatientPerDay;
     }
 
     @Override

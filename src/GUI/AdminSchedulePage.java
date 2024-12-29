@@ -4,8 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import Main.*;
 public class AdminSchedulePage extends JFrame {
-    JButton addRendezvousButton = new JButton("Add Rendezvous");
+    //JButton addRendezvousButton = new JButton("Add Rendezvous");
     JButton manageScheduleButton = new JButton("Manage Schedule");
+    JTextArea displayRendezvous = new JTextArea();
 
     JButton editDoctorButton = new JButton("Edit Doctor Details");
     JButton back = new JButton("Back");
@@ -42,6 +43,7 @@ public class AdminSchedulePage extends JFrame {
         // Set up edit doctor panel
         editDoctorLabel.add(new JLabel("Diploma ID", SwingConstants.RIGHT));
         editDoctorLabel.add(new JLabel("Name", SwingConstants.RIGHT));
+        editDoctorLabel.add(new JLabel("Max Patients per Day", SwingConstants.RIGHT));
         editDoctor.add(editDoctorLabel, BorderLayout.WEST);
 
         JPanel editControls = new JPanel(new GridLayout(0, 1, 2, 2));
@@ -50,28 +52,50 @@ public class AdminSchedulePage extends JFrame {
         editControls.add(d_id);
         d_id.setEditable(false);
         JTextField d_name = new JTextField();
+        d_name.setText(doctor.getName());
         editControls.add(d_name);
+        JTextField d_appointment = new JTextField();
+        if (doctor.getSchedule() != null) {
+            d_appointment.setText(String.valueOf(doctor.getSchedule().getMaxPatientPerDay()));
+        }
+        editControls.add(d_appointment);
         editDoctor.add(editControls, BorderLayout.CENTER);
 
-        // Set up add sections button
-        addRendezvousButton.setBounds(20, 25, 200, 50);
-        addRendezvousButton.setFocusable(false);
+        // Set up display rendezvous text area
+        displayRendezvous.setMargin(new Insets(8, 8, 8, 8));
+        displayRendezvous.setBounds(20, 20, 340, 200);
+        displayRendezvous.setFont(new Font(null, Font.PLAIN, 18));
+        displayRendezvous.setBackground(new Color(240, 238, 183));
+        displayRendezvous.setEditable(false);
 
+        int i = 1;
+        displayRendezvous.append("\t Schedule\n");
+        if (doctor.getSchedule().getSessions() != null) {
+            for (Rendezvous rendezvous : doctor.getSchedule().getSessions()) {
+                displayRendezvous.append(String.valueOf(i));
+                displayRendezvous.append(") ");
+                displayRendezvous.append(rendezvous.toString());
+                displayRendezvous.append("\n");
+                ++i;
+            }
+        }
+        this.add(displayRendezvous);
 
-        // Set up manage sections button
-        manageScheduleButton.setBounds(20, 100, 200, 50);
-        manageScheduleButton.setFocusable(false);
-        manageScheduleButton.addActionListener(e -> {
-            //new AdminViewDoctorsPage(this, doctor);
-            this.setVisible(false);
-        });
-        this.add(manageScheduleButton);
+//        // Set up manage doctor button
+//        manageScheduleButton.setBounds(20, 100, 200, 50);
+//        manageScheduleButton.setFocusable(false);
+//        manageScheduleButton.addActionListener(e -> {
+//            //new AdminViewDoctorsPage(this, doctor);
+//            this.setVisible(false);
+//        });
+//        this.add(manageScheduleButton);
 
+        // TODO if changed max patients, delete extra if needed
         // Set up edit section button
         editDoctorButton.setBounds(220, 300, 150, 50);
         editDoctorButton.setFocusable(false);
         editDoctorButton.addActionListener( e -> {
-            JOptionPane.showMessageDialog(frame, editDoctor, "Edit Hospital Details", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(frame, editDoctor, "Edit Doctor Details", JOptionPane.PLAIN_MESSAGE);
             doctor.setName(d_name.getText());
         });
         this.add(editDoctorButton);
