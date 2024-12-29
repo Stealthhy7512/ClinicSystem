@@ -65,7 +65,7 @@ public class Section implements Serializable {
 
     @Override
     public String toString() {
-        return "Main.Section ID: " + id +
-                " | Main.Section Name: " + name;
+        return "Section ID: " + id +
+                " | Section Name: " + name;
     }
 }

@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 public class StartPage extends JFrame {
 
-    JButton button1 = new JButton();
-    JButton button2 = new JButton();
+    JButton patientButton = new JButton();
+    JButton adminButton = new JButton();
     CRS crs = new CRS();
 
 
@@ -49,23 +49,24 @@ public class StartPage extends JFrame {
         //DoctorsPage doctorsPage = new DoctorsPage(this);
 
 
-        button1.setText("Patient");
-        //button1.setPreferredSize(new Dimension(100, 100));
-        button1.setBounds(25, 150, 150, 50);
-        button1.setFocusable(false);
-        button1.addActionListener((e) -> {
-
+        patientButton.setText("Patient");
+        //patientButton.setPreferredSize(new Dimension(100, 100));
+        patientButton.setBounds(25, 150, 150, 50);
+        patientButton.setFocusable(false);
+        patientButton.addActionListener((e) -> {
+            new ClientRendezvousPage(this, crs);
+            this.setVisible(false);
         });
-        this.add(button1);
+        this.add(patientButton);
 
-        button2.setText("Administrator");
-        button2.setBounds(185, 150, 150, 50);
-        button2.setFocusable(false);
-        button2.addActionListener((e) -> {
+        adminButton.setText("Administrator");
+        adminButton.setBounds(185, 150, 150, 50);
+        adminButton.setFocusable(false);
+        adminButton.addActionListener((e) -> {
             new AdminHospitalPage(this, crs);
             this.setVisible(false);
         });
-        this.add(button2);
+        this.add(adminButton);
 
         // Make the frame visible
         this.setVisible(true);

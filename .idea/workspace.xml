@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40c55ea2-516b-4bb2-b350-60bc44aee3e3" name="Changes" comment="Started GUI">
+    <list default="true" id="40c55ea2-516b-4bb2-b350-60bc44aee3e3" name="Changes" comment="added object details editor button and display rendzevous list for selected doctor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load.ser" beforeDir="false" afterPath="$PROJECT_DIR$/load.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AdminDoctorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminDoctorPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AdminHospitalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminHospitalPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AdminSchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminSchedulePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AdminSectionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminSectionPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Rendezvous.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Rendezvous.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/DoctorsPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Section.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +59,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="GUI" />
       <recent name="" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -134,7 +130,7 @@
       <workItem from="1734734160941" duration="2938000" />
       <workItem from="1735333971641" duration="3145000" />
       <workItem from="1735351985784" duration="1982000" />
-      <workItem from="1735413362955" duration="22556000" />
+      <workItem from="1735413362955" duration="28910000" />
     </task>
     <task id="LOCAL-00001" summary="first commit to repo">
       <created>1734699329368</created>
@@ -171,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1735500115650</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added object details editor button and display rendzevous list for selected doctor">
+      <created>1735505826543</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1735505826543</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +187,8 @@
     <MESSAGE value="synchronized keyword added for some methods" />
     <MESSAGE value="Added some setters and getters" />
     <MESSAGE value="Started GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started GUI" />
+    <MESSAGE value="added object details editor button and display rendzevous list for selected doctor" />
+    <option name="LAST_COMMIT_MESSAGE" value="added object details editor button and display rendzevous list for selected doctor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
