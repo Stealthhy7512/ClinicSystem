@@ -5,6 +5,8 @@ import Main.*;
 import javax.swing.*;
 import java.awt.*;
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 public class StartPage extends JFrame {
@@ -18,11 +20,21 @@ public class StartPage extends JFrame {
     public StartPage() {
         crs.loadTablesToDisk("C://Users/kaany/Desktop/Java/ClinicSystem/load.ser");
         // Set up the frame
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setSize(400, 400);
         //this.setLayout(new BorderLayout()); // Use BorderLayout for simplicity
         this.setTitle("Clinic System");
         this.setLayout(null);
+
+        this.addWindowListener(new WindowAdapter() {
+                                   @Override
+                                   public void windowClosing(WindowEvent e) {
+                                       crs.saveTablesToDisk("C://Users/kaany/Desktop/Java/ClinicSystem/load.ser");
+                                       // Exit status of 1 shows successful save
+                                       System.exit(1);
+                                       super.windowClosed(e);
+                                   }
+                               });
 
 //        ArrayList<JButton> buttons = new ArrayList<>();
 //
@@ -46,10 +58,10 @@ public class StartPage extends JFrame {
 //        // Add the label to the frame
 //        this.add(label1, BorderLayout.CENTER);
 
-        //DoctorsPage doctorsPage = new DoctorsPage(this);
+                //DoctorsPage doctorsPage = new DoctorsPage(this);
 
 
-        patientButton.setText("Patient");
+                patientButton.setText("Patient");
         //patientButton.setPreferredSize(new Dimension(100, 100));
         patientButton.setBounds(25, 150, 150, 50);
         patientButton.setFocusable(false);

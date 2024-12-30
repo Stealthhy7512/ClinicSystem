@@ -20,6 +20,6 @@ public class Rendezvous implements Serializable {
 
     @Override
     public String toString() {
-        return dateTime.toString().substring(0, 10);
+        return dateTime.toString().substring(0, 10) + " " + dateTime.toString().substring(dateTime.toString().length() - 4) + " " + patient.toString();
     }
 }

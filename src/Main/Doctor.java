@@ -7,6 +7,7 @@ public class Doctor extends Person {
     public Doctor(String name, long nationalId, int diplomaId) {
         super(name, nationalId);
         this.diplomaId = diplomaId;
+        this.schedule = null;
     }
 
     public Doctor(String name, long nationalId, int diplomaId, Schedule schedule) {
@@ -15,6 +16,7 @@ public class Doctor extends Person {
         this.setSchedule(schedule);
     }
 
+    // TODO Every doctor has an empty schedule by default
     public void setSchedule(Schedule schedule) {
         if (schedule != null) {
             this.schedule = schedule;

@@ -26,10 +26,11 @@ public class AdminDoctorPage extends JFrame {
         this.setTitle("Section " + section.getName() + " (" + section.getId() + ")");
         this.setLayout(null);
 
-        // Set up add section panel
+        // Set up add doctor panel
         label.add(new JLabel("National ID", SwingConstants.RIGHT));
         label.add(new JLabel("Name", SwingConstants.RIGHT));
         label.add(new JLabel("Diploma ID", SwingConstants.RIGHT));
+        label.add(new JLabel("Max Patients per Day", SwingConstants.RIGHT));
         addDoctor.add(label, BorderLayout.WEST);
 
         JPanel controls = new JPanel(new GridLayout(0, 1, 2, 2));
@@ -39,6 +40,8 @@ public class AdminDoctorPage extends JFrame {
         controls.add(name);
         JTextField diplomaId = new JTextField();
         controls.add(diplomaId);
+        JTextField maxPatientsPerDay = new JTextField();
+        controls.add(maxPatientsPerDay);
         addDoctor.add(controls, BorderLayout.CENTER);
 
         // Set up edit hospital panel
@@ -56,14 +59,17 @@ public class AdminDoctorPage extends JFrame {
         editControls.add(h_name);
         editSection.add(editControls, BorderLayout.CENTER);
 
+        // TODO Add max patients per day label
         // Set up add sections button
         addDoctorButton.setBounds(20, 25, 200, 50);
         addDoctorButton.setFocusable(false);
         addDoctorButton.addActionListener(e -> {
             try {
-                JOptionPane.showMessageDialog(frame, addDoctor, "Add Section", JOptionPane.PLAIN_MESSAGE);
-                if (!name.getText().isEmpty() && !id.getText().isEmpty() && !diplomaId.getText().isEmpty()) {
-                    section.addDoctor(new Doctor(name.getText(), Long.parseLong(id.getText()), Integer.parseInt(diplomaId.getText())));
+                JOptionPane.showMessageDialog(frame, addDoctor, "Add Doctor", JOptionPane.PLAIN_MESSAGE);
+                if (!name.getText().isEmpty() && !id.getText().isEmpty() &&
+                        !diplomaId.getText().isEmpty() && !maxPatientsPerDay.getText().isEmpty()) {
+                    section.addDoctor(new Doctor(name.getText(), Long.parseLong(id.getText()), Integer.parseInt(diplomaId.getText()),
+                                    new Schedule(Integer.parseInt(maxPatientsPerDay.getText()))));
                 }
             } catch (DuplicateInfoException DuplicateInfoError) {
                 JOptionPane.showMessageDialog(frame, "Doctor already exists.", "Error", JOptionPane.ERROR_MESSAGE);

@@ -36,6 +36,7 @@ public class Hospital implements Serializable {
         return null;
     }
 
+    // TODO add unit test
     public synchronized void addSection(Section section) throws DuplicateInfoException {
         if (sectionLinkedList != null) {
             for (Section sect : sectionLinkedList) {

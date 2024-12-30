@@ -25,7 +25,7 @@ public class AdminSchedulePage extends JFrame {
         this.setTitle("Doctor " + doctor.getName() + " (" + doctor.getDiplomaId() + ")");
         this.setLayout(null);
 
-        // Set up add section panel
+        // Set up add doctor panel
         label.add(new JLabel("National ID", SwingConstants.RIGHT));
         label.add(new JLabel("Name", SwingConstants.RIGHT));
         label.add(new JLabel("Diploma ID", SwingConstants.RIGHT));
@@ -38,6 +38,8 @@ public class AdminSchedulePage extends JFrame {
         controls.add(name);
         JTextField diplomaId = new JTextField();
         controls.add(diplomaId);
+        JTextField maxPatientsPerDay = new JTextField();
+        controls.add(maxPatientsPerDay);
         addRendezvous.add(controls, BorderLayout.CENTER);
 
         // Set up edit doctor panel
@@ -64,21 +66,25 @@ public class AdminSchedulePage extends JFrame {
         // Set up display rendezvous text area
         displayRendezvous.setMargin(new Insets(8, 8, 8, 8));
         displayRendezvous.setBounds(20, 20, 340, 200);
-        displayRendezvous.setFont(new Font(null, Font.PLAIN, 18));
+        displayRendezvous.setFont(new Font(null, Font.PLAIN, 17));
         displayRendezvous.setBackground(new Color(240, 238, 183));
         displayRendezvous.setEditable(false);
 
+        // TODO Add horizontal scrollbar
         int i = 1;
         displayRendezvous.append("\t Schedule\n");
-        if (doctor.getSchedule().getSessions() != null) {
-            for (Rendezvous rendezvous : doctor.getSchedule().getSessions()) {
-                displayRendezvous.append(String.valueOf(i));
-                displayRendezvous.append(") ");
-                displayRendezvous.append(rendezvous.toString());
-                displayRendezvous.append("\n");
-                ++i;
+        if (doctor.getSchedule() != null) {
+            if (doctor.getSchedule().getSessions() != null) {
+                for (Rendezvous rendezvous : doctor.getSchedule().getSessions()) {
+                    displayRendezvous.append(String.valueOf(i));
+                    displayRendezvous.append(") ");
+                    displayRendezvous.append(rendezvous.toString());
+                    displayRendezvous.append("\n");
+                    ++i;
+                }
             }
         }
+
         this.add(displayRendezvous);
 
 //        // Set up manage doctor button
@@ -97,6 +103,7 @@ public class AdminSchedulePage extends JFrame {
         editDoctorButton.addActionListener( e -> {
             JOptionPane.showMessageDialog(frame, editDoctor, "Edit Doctor Details", JOptionPane.PLAIN_MESSAGE);
             doctor.setName(d_name.getText());
+            doctor.getSchedule().setMaxPatientPerDay(Integer.parseInt(d_appointment.getText()));
         });
         this.add(editDoctorButton);
 
