@@ -59,10 +59,15 @@ public class AdminSectionPage extends JFrame {
         addSectionButton.setBounds(20, 25, 200, 50);
         addSectionButton.setFocusable(false);
         addSectionButton.addActionListener(e -> {
-            JOptionPane.showMessageDialog(frame, addSection, "Add Section", JOptionPane.PLAIN_MESSAGE);
-            if (!id.getText().isEmpty() && !name.getText().isEmpty()) {
-                hospital.addSection(new Section(Integer.parseInt(id.getText()), name.getText()));
+            try {
+                JOptionPane.showMessageDialog(frame, addSection, "Add Section", JOptionPane.PLAIN_MESSAGE);
+                if (!id.getText().isEmpty() && !name.getText().isEmpty()) {
+                    hospital.addSection(new Section(Integer.parseInt(id.getText()), name.getText()));
+                }
+            } catch (DuplicateInfoException DuplicateInfoError) {
+                JOptionPane.showMessageDialog(frame, "Section already exists.", "Error", JOptionPane.ERROR_MESSAGE);
             }
+
         });
         this.add(addSectionButton);
 

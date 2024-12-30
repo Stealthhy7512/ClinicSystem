@@ -70,6 +70,7 @@ public class ClientRendezvousPage extends JFrame {
         sectionBox.setBounds(20, 50, 250, 30);
         sectionBox.addActionListener(e -> {
             hospitalBox.removeAllItems();
+            hospitalBox.addItem(null);
             hospitalBox.setEnabled(false);
             if (sectionBox.getSelectedItem() != null) {
                 hospitalBox.setEnabled(true);
@@ -92,10 +93,11 @@ public class ClientRendezvousPage extends JFrame {
         hospitalLabel.setBounds(20, 120, 100, 20);
         hospitalBox.setBounds(20, 140, 250, 30);
         hospitalBox.setEnabled(false);
+        hospitalBox.addItem(null);
         hospitalBox.addActionListener(e -> {
             doctorBox.removeAllItems();
+            doctorBox.addItem(null);
             doctorBox.setEnabled(false);
-// FIXME fix adding of duplicate doctors
             if (hospitalBox.getSelectedItem() != null) {
                 doctorBox.setEnabled(true);
                 String hospitalBoxSelect = (String)hospitalBox.getSelectedItem();
@@ -142,6 +144,7 @@ public class ClientRendezvousPage extends JFrame {
         doctorLabel.setBounds(20, 210, 100, 20);
         doctorBox.setBounds(20, 230, 250, 30);
         doctorBox.setEnabled(false);
+        doctorBox.addItem(null);
         doctorBox.addActionListener(e -> {
             addButton.setEnabled(false);
             if (doctorBox.getSelectedItem() != null) {
@@ -168,7 +171,9 @@ public class ClientRendezvousPage extends JFrame {
             Doctor doctor = section.getDoctor(doctorBoxSelected);
             JOptionPane.showMessageDialog(frame, addRendezvous, "Add Rendezvous Details", JOptionPane.PLAIN_MESSAGE);
             try {
-                if (!doctor.getSchedule().addRendezvous(new Patient(p_name.getText(), Long.parseLong(p_id.getText())), new SimpleDateFormat("dd/MM/yyyy").parse(date.getText()))) {
+                if (!doctor.getSchedule().addRendezvous(new Patient(p_name.getText(), Long.parseLong(p_id.getText())),
+                        new SimpleDateFormat("dd/MM/yyyy").parse(date.getText()))) ;
+                {
                     JOptionPane.showMessageDialog(frame, "Doctor is full.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             } catch (ParseException err) {

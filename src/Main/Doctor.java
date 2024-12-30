@@ -16,7 +16,6 @@ public class Doctor extends Person {
         this.setSchedule(schedule);
     }
 
-    // TODO Every doctor has an empty schedule by default
     public void setSchedule(Schedule schedule) {
         if (schedule != null) {
             this.schedule = schedule;

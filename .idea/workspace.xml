@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40c55ea2-516b-4bb2-b350-60bc44aee3e3" name="Changes" comment="added Client Rendezvous adding page">
+    <list default="true" id="40c55ea2-516b-4bb2-b350-60bc44aee3e3" name="Changes" comment="Client Rendezvous improved, added more TODOs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/load.ser" beforeDir="false" afterPath="$PROJECT_DIR$/load.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/AdminDoctorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminDoctorPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AdminHospitalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminHospitalPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/AdminSchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminSchedulePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AdminViewSchedulePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AdminSectionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminSectionPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/ClientRendezvousPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ClientRendezvousPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/CRS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/CRS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Rendezvous.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Rendezvous.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Patient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +152,8 @@
       <workItem from="1735333971641" duration="3145000" />
       <workItem from="1735351985784" duration="1982000" />
       <workItem from="1735413362955" duration="31525000" />
-      <workItem from="1735576739858" duration="6854000" />
+      <workItem from="1735576739858" duration="7157000" />
+      <workItem from="1735589707694" duration="2515000" />
     </task>
     <task id="LOCAL-00001" summary="first commit to repo">
       <created>1734699329368</created>
@@ -209,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1735513951757</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Client Rendezvous improved, added more TODOs">
+      <created>1735586257921</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735586257921</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +234,8 @@
     <MESSAGE value="added object details editor button and display rendzevous list for selected doctor" />
     <MESSAGE value="fixed some toString methods and renamed object names. deleted redundant DoctorsPage" />
     <MESSAGE value="added Client Rendezvous adding page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Client Rendezvous adding page" />
+    <MESSAGE value="Client Rendezvous improved, added more TODOs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Client Rendezvous improved, added more TODOs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

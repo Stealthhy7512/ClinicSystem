@@ -59,7 +59,6 @@ public class AdminDoctorPage extends JFrame {
         editControls.add(h_name);
         editSection.add(editControls, BorderLayout.CENTER);
 
-        // TODO Add max patients per day label
         // Set up add sections button
         addDoctorButton.setBounds(20, 25, 200, 50);
         addDoctorButton.setFocusable(false);
@@ -90,7 +89,7 @@ public class AdminDoctorPage extends JFrame {
         editSectionButton.setBounds(220, 300, 150, 50);
         editSectionButton.setFocusable(false);
         editSectionButton.addActionListener( e -> {
-            JOptionPane.showMessageDialog(frame, editSection, "Edit Hospital Details", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(frame, editSection, "Edit Section Details", JOptionPane.PLAIN_MESSAGE);
             section.setName(h_name.getText());
         });
         this.add(editSectionButton);

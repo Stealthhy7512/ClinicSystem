@@ -7,7 +7,6 @@ public class Patient extends Person {
 
     }
 
-    // TODO Inform client to overwrite previous rendezvous if new is set in GUI
     public void setRendezvous(Rendezvous rendezvous) {
         this.rendezvous = rendezvous;
     }

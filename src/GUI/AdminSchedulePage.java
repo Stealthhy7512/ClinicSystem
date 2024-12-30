@@ -8,6 +8,8 @@ public class AdminSchedulePage extends JFrame {
     JButton manageScheduleButton = new JButton("Manage Schedule");
     JTextArea displayRendezvous = new JTextArea();
 
+    JScrollPane scrollPane = new JScrollPane(displayRendezvous);
+
     JButton editDoctorButton = new JButton("Edit Doctor Details");
     JButton back = new JButton("Back");
 
@@ -63,6 +65,10 @@ public class AdminSchedulePage extends JFrame {
         editControls.add(d_appointment);
         editDoctor.add(editControls, BorderLayout.CENTER);
 
+        // Set up scroll pane
+        scrollPane.setBounds(20, 20, 340 ,200);
+        JScrollBar scrollBar = scrollPane.getHorizontalScrollBar();
+
         // Set up display rendezvous text area
         displayRendezvous.setMargin(new Insets(8, 8, 8, 8));
         displayRendezvous.setBounds(20, 20, 340, 200);
@@ -70,7 +76,6 @@ public class AdminSchedulePage extends JFrame {
         displayRendezvous.setBackground(new Color(240, 238, 183));
         displayRendezvous.setEditable(false);
 
-        // TODO Add horizontal scrollbar
         int i = 1;
         displayRendezvous.append("\t Schedule\n");
         if (doctor.getSchedule() != null) {
@@ -84,17 +89,7 @@ public class AdminSchedulePage extends JFrame {
                 }
             }
         }
-
-        this.add(displayRendezvous);
-
-//        // Set up manage doctor button
-//        manageScheduleButton.setBounds(20, 100, 200, 50);
-//        manageScheduleButton.setFocusable(false);
-//        manageScheduleButton.addActionListener(e -> {
-//            //new AdminViewDoctorsPage(this, doctor);
-//            this.setVisible(false);
-//        });
-//        this.add(manageScheduleButton);
+        this.add(scrollPane);
 
         // TODO if changed max patients, delete extra if needed
         // Set up edit section button

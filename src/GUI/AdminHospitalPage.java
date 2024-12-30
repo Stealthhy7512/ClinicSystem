@@ -15,7 +15,7 @@ public class AdminHospitalPage extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(400, 400);
         //this.setLayout(new BorderLayout()); // Use BorderLayout for simplicity
-        this.setTitle("Hospitals");
+        this.setTitle("Clinic System");
         this.setLayout(null);
 
         label.add(new JLabel("ID", SwingConstants.RIGHT));

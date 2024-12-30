@@ -34,9 +34,13 @@ public class CRS {
         }
     }
 
-    // TODO Creates rendezvous if everything OK, throws exception if and of the IDs don't match; catch and raise alert in GUI
     public boolean makeRendezvous(long patientId, int hospitalId, int sectionId, int diplomaId, Date desiredDate)
             throws IdException {
+        try {
+            hospitals.get(hospitalId).getSection(sectionId).getDoctor(diplomaId).getSchedule().addRendezvous(patients.get(patientId), desiredDate);
+        } catch (NullPointerException e) {
+            throw new IdException("Illegal ID");
+        }
         return false;
     }
 
