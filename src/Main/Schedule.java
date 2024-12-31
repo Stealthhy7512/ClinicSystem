@@ -42,8 +42,6 @@ public class Schedule implements Serializable {
         return count;
     }
 
-    // TODO add unit test
-    // TODO Adds rendezvous if max per day is not reached, else returns false; give alert in GUI if false
     public synchronized boolean addRendezvous(Patient p, Date desiredDate) {
         if (countSessionsForDay(desiredDate) < maxPatientPerDay) {
             Rendezvous rendezvous = new Rendezvous(desiredDate, doctor, p);
