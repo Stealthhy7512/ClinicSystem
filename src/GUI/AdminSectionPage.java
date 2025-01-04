@@ -2,6 +2,9 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
 import Main.*;
 
 public class AdminSectionPage extends JFrame {
@@ -20,13 +23,22 @@ public class AdminSectionPage extends JFrame {
     JPanel editHospitalLabel = new JPanel(new GridLayout(0, 1, 2, 2));
 
 
-    public AdminSectionPage(JFrame frame, Hospital hospital) {
+    public AdminSectionPage(JFrame frame, Hospital hospital, CRS crs) {
         // Set up the frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(400, 400);
         //this.setLayout(new BorderLayout()); // Use BorderLayout for simplicity
         this.setTitle("Hospital " + hospital.getName() + " (" + hospital.getId() + ")");
         this.setLayout(null);
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                crs.saveTablesToDisk("C://Users/kaany/Desktop/Java/ClinicSystem/load.ser");
+                // Exit status of 1 shows successful save
+                System.exit(1);
+                super.windowClosed(e);
+            }
+        });
 
         // Set up add section panel
         label.add(new JLabel("ID", SwingConstants.RIGHT));
@@ -75,7 +87,7 @@ public class AdminSectionPage extends JFrame {
         manageSectionsButton.setBounds(20, 100, 200, 50);
         manageSectionsButton.setFocusable(false);
         manageSectionsButton.addActionListener(e -> {
-            new AdminViewSectionsPage(this, hospital);
+            new AdminViewSectionsPage(this, hospital, crs);
             this.setVisible(false);
         });
         this.add(manageSectionsButton);

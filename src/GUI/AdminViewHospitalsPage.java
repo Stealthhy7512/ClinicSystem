@@ -1,6 +1,8 @@
 package GUI;
 
 import javax.swing.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 import Main.*;
@@ -16,6 +18,15 @@ public class AdminViewHospitalsPage extends JFrame {
         //this.setLayout(new BorderLayout()); // Use BorderLayout for simplicity
         this.setTitle("Hospitals");
         this.setLayout(null);
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                crs.saveTablesToDisk("C://Users/kaany/Desktop/Java/ClinicSystem/load.ser");
+                // Exit status of 1 shows successful save
+                System.exit(1);
+                super.windowClosed(e);
+            }
+        });
 
         int i = 0;
         for (Hospital hospital : crs.getHospitals().values()) {
@@ -23,7 +34,7 @@ public class AdminViewHospitalsPage extends JFrame {
             buttons.get(i).setBounds(10, 40*i + 5, 350, 40);
             buttons.get(i).setFocusable(false);
             buttons.get(i).addActionListener(e -> {
-                new AdminSectionPage(this, hospital);
+                new AdminSectionPage(this, hospital, crs);
                 this.setVisible(false);
             });
             this.add(buttons.get(i));

@@ -18,7 +18,7 @@ public class AdminDoctorPage extends JFrame {
     JPanel editSection = new JPanel(new BorderLayout(5, 5));
     JPanel editSectionLabel = new JPanel(new GridLayout(0, 1, 2, 2));
 
-    public AdminDoctorPage(JFrame frame, Section section) {
+    public AdminDoctorPage(JFrame frame, Section section, CRS crs) {
         // Set up the frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(400, 400);
@@ -80,7 +80,7 @@ public class AdminDoctorPage extends JFrame {
         manageDoctorsButton.setBounds(20, 100, 200, 50);
         manageDoctorsButton.setFocusable(false);
         manageDoctorsButton.addActionListener(e -> {
-            new AdminViewDoctorsPage(this, section);
+            new AdminViewDoctorsPage(this, section, crs);
             this.setVisible(false);
         });
         this.add(manageDoctorsButton);

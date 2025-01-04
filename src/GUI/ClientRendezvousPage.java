@@ -4,6 +4,8 @@ import Main.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.text.ParseException;
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -31,6 +33,15 @@ public class ClientRendezvousPage extends JFrame {
         this.setSize(400, 400);
         this.setTitle("Create Rendezvous");
         this.setLayout(null);
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                crs.saveTablesToDisk("C://Users/kaany/Desktop/Java/ClinicSystem/load.ser");
+                // Exit status of 1 shows successful save
+                System.exit(1);
+                super.windowClosed(e);
+            }
+        });
 
         sectionBox.addItem(null);
         for (Hospital hospital : crs.getHospitals().values()) {
@@ -172,7 +183,7 @@ public class ClientRendezvousPage extends JFrame {
             JOptionPane.showMessageDialog(frame, addRendezvous, "Add Rendezvous Details", JOptionPane.PLAIN_MESSAGE);
             try {
                 if (!doctor.getSchedule().addRendezvous(new Patient(p_name.getText(), Long.parseLong(p_id.getText())),
-                        new SimpleDateFormat("dd/MM/yyyy").parse(date.getText()))) ;
+                        new SimpleDateFormat("dd/MM/yyyy").parse(date.getText())))
                 {
                     JOptionPane.showMessageDialog(frame, "Doctor is full.", "Error", JOptionPane.ERROR_MESSAGE);
                 }

@@ -2,6 +2,9 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
 import Main.*;
 
 public class AdminHospitalPage extends JFrame {
@@ -17,6 +20,15 @@ public class AdminHospitalPage extends JFrame {
         //this.setLayout(new BorderLayout()); // Use BorderLayout for simplicity
         this.setTitle("Clinic System");
         this.setLayout(null);
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                crs.saveTablesToDisk("C://Users/kaany/Desktop/Java/ClinicSystem/load.ser");
+                // Exit status of 1 shows successful save
+                System.exit(1);
+                super.windowClosed(e);
+            }
+        });
 
         label.add(new JLabel("ID", SwingConstants.RIGHT));
         label.add(new JLabel("Name", SwingConstants.RIGHT));

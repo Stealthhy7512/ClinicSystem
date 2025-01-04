@@ -61,6 +61,7 @@ public class CRS {
         }
     }
 
+    // TODO check for existence of file
     public void loadTablesToDisk(String fullPath) {
         try {
             FileInputStream file = new FileInputStream(fullPath);

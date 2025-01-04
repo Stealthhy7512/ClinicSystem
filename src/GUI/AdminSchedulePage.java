@@ -2,6 +2,9 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
 import Main.*;
 public class AdminSchedulePage extends JFrame {
     //JButton addRendezvousButton = new JButton("Add Rendezvous");
@@ -19,13 +22,22 @@ public class AdminSchedulePage extends JFrame {
     JPanel editDoctor = new JPanel(new BorderLayout(5, 5));
     JPanel editDoctorLabel = new JPanel(new GridLayout(0, 1, 2, 2));
 
-    public AdminSchedulePage(JFrame frame, Doctor doctor) {
+    public AdminSchedulePage(JFrame frame, Doctor doctor, CRS crs) {
         // Set up the frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(400, 400);
         //this.setLayout(new BorderLayout()); // Use BorderLayout for simplicity
         this.setTitle("Doctor " + doctor.getName() + " (" + doctor.getDiplomaId() + ")");
         this.setLayout(null);
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                crs.saveTablesToDisk("C://Users/kaany/Desktop/Java/ClinicSystem/load.ser");
+                // Exit status of 1 shows successful save
+                System.exit(1);
+                super.windowClosed(e);
+            }
+        });
 
         // Set up add doctor panel
         label.add(new JLabel("National ID", SwingConstants.RIGHT));
