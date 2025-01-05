@@ -1,5 +1,8 @@
-package Main;
+package Test;
 
+import Main.Doctor;
+import Main.DuplicateInfoException;
+import Main.Section;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

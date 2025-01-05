@@ -6,7 +6,6 @@ public class Patient extends Person {
         super(name, nationalId);
 
     }
-
     public void setRendezvous(Rendezvous rendezvous) {
         this.rendezvous = rendezvous;
     }

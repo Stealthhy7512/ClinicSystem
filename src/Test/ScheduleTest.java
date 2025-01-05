@@ -1,9 +1,12 @@
-package Main;
+package Test;
 
 import java.text.ParseException;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
+import Main.Doctor;
+import Main.Patient;
+import Main.Schedule;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

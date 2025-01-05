@@ -41,7 +41,7 @@ public class CRS {
         } catch (NullPointerException e) {
             throw new IdException("Illegal ID");
         }
-        return false;
+        return true;
     }
 
     public void saveTablesToDisk(String fullPath) {
