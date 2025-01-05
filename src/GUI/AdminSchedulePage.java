@@ -7,7 +7,6 @@ import java.awt.event.WindowEvent;
 
 import Main.*;
 public class AdminSchedulePage extends JFrame {
-    //JButton addRendezvousButton = new JButton("Add Rendezvous");
     JButton manageScheduleButton = new JButton("Manage Schedule");
     JTextArea displayRendezvous = new JTextArea();
 
@@ -26,7 +25,6 @@ public class AdminSchedulePage extends JFrame {
         // Set up the frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(400, 400);
-        //this.setLayout(new BorderLayout()); // Use BorderLayout for simplicity
         this.setTitle("Doctor " + doctor.getName() + " (" + doctor.getDiplomaId() + ")");
         this.setLayout(null);
         this.addWindowListener(new WindowAdapter() {

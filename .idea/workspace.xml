@@ -9,14 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40c55ea2-516b-4bb2-b350-60bc44aee3e3" name="Changes" comment="Added window listener to all pages">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load.ser" beforeDir="false" afterPath="$PROJECT_DIR$/load.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/HospitalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/HospitalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/PersonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/ScheduleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/ScheduleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/SectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/SectionTest.java" afterDir="false" />
+    <list default="true" id="40c55ea2-516b-4bb2-b350-60bc44aee3e3" name="Changes" comment="Added more unit tests and corrected a small issue in CRS.makeRendezvous. Added proper packaging of Test classes">
+      <change beforePath="$PROJECT_DIR$/src/GUI/AdminDoctorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminDoctorPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AdminSchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminSchedulePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AdminSectionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminSectionPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AdminViewDoctorsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminViewDoctorsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AdminViewHospitalsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminViewHospitalsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AdminViewSectionsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminViewSectionsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/ClientRendezvousPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ClientRendezvousPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/GUIMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUIMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/CRSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/CRSTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +202,7 @@
       <workItem from="1735854745384" duration="422000" />
       <workItem from="1736000678648" duration="1228000" />
       <workItem from="1736008132266" duration="1620000" />
-      <workItem from="1736081463305" duration="2503000" />
+      <workItem from="1736081463305" duration="3023000" />
     </task>
     <task id="LOCAL-00001" summary="first commit to repo">
       <created>1734699329368</created>
@@ -292,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1736001724278</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added more unit tests and corrected a small issue in CRS.makeRendezvous. Added proper packaging of Test classes">
+      <created>1736084979507</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1736084979507</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +323,8 @@
     <MESSAGE value="Added more error catching blocks and added some boilerplate objects for testing" />
     <MESSAGE value="Added some unit testing" />
     <MESSAGE value="Added window listener to all pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added window listener to all pages" />
+    <MESSAGE value="Added more unit tests and corrected a small issue in CRS.makeRendezvous. Added proper packaging of Test classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more unit tests and corrected a small issue in CRS.makeRendezvous. Added proper packaging of Test classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

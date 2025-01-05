@@ -2,6 +2,7 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
+
 import Main.*;
 
 public class AdminDoctorPage extends JFrame {
@@ -22,7 +23,6 @@ public class AdminDoctorPage extends JFrame {
         // Set up the frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(400, 400);
-        //this.setLayout(new BorderLayout()); // Use BorderLayout for simplicity
         this.setTitle("Section " + section.getName() + " (" + section.getId() + ")");
         this.setLayout(null);
 

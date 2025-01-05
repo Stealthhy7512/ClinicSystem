@@ -1,21 +1,17 @@
 package GUI;
 
-import Main.*;
-
 import javax.swing.*;
-import java.awt.*;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.ArrayList;
+
+import Main.*;
 
 public class StartPage extends JFrame {
 
     JButton patientButton = new JButton();
     JButton adminButton = new JButton();
     CRS crs = new CRS();
-
-
 
     public StartPage() {
         crs.loadTablesToDisk("C://Users/kaany/Desktop/Java/ClinicSystem/load.ser");
@@ -36,33 +32,7 @@ public class StartPage extends JFrame {
                                    }
                                });
 
-//        ArrayList<JButton> buttons = new ArrayList<>();
-//
-//        for (Hospital hospital : crs.getHospitals().values()) {
-//            buttons.add(new JButton("Hospital " + hospital));
-//        }
-//
-//        for (JButton button : buttons) {
-//            this.add(button);
-//        }
-
-//        // Set up the label
-//        label1.setText("Doctors");
-//        label1.setFont(new Font(null, Font.BOLD, 20));
-//        label1.setForeground(Color.BLACK);
-//
-//        label1.setBounds(20, 30, 100, 30);
-//        label1.setBackground(Color.BLUE);
-//        label1.setOpaque(true);
-//
-//        // Add the label to the frame
-//        this.add(label1, BorderLayout.CENTER);
-
-                //DoctorsPage doctorsPage = new DoctorsPage(this);
-
-
-                patientButton.setText("Patient");
-        //patientButton.setPreferredSize(new Dimension(100, 100));
+        patientButton.setText("Patient");
         patientButton.setBounds(25, 150, 150, 50);
         patientButton.setFocusable(false);
         patientButton.addActionListener((e) -> {

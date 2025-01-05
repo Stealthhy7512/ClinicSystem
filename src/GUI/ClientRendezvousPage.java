@@ -1,14 +1,13 @@
 package GUI;
 
-import Main.*;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.text.ParseException;
-import java.util.Date;
 import java.text.SimpleDateFormat;
+
+import Main.*;
 
 public class ClientRendezvousPage extends JFrame {
     private JLabel sectionLabel = new JLabel("Choose section");
@@ -67,11 +66,8 @@ public class ClientRendezvousPage extends JFrame {
 
         JPanel editControls = new JPanel(new GridLayout(0, 1, 2, 2));
         JTextField p_id = new JTextField();
-        //h_id.setText(String.valueOf(hospital.getId()));
         editControls.add(p_id);
-        //h_id.setEditable(false);
         JTextField p_name = new JTextField();
-        //h_name.setText(hospital.getName());
         editControls.add(p_name);
         JTextField date = new JTextField();
         editControls.add(date);
@@ -85,11 +81,6 @@ public class ClientRendezvousPage extends JFrame {
             hospitalBox.setEnabled(false);
             if (sectionBox.getSelectedItem() != null) {
                 hospitalBox.setEnabled(true);
-//                for (Hospital hospital : crs.getHospitals().values()) {
-//                    if (hospital.getSection((String)sectionBox.getSelectedItem()) != null) {
-//                        hospitalBox.addItem(hospital.getName() + " (" + hospital.getId() + ")");
-//                    }
-//                }
                 String selectedSection = (String)sectionBox.getSelectedItem();
                 for (Hospital hospital : crs.getHospitals().values()) {
                     if (hospital.getSection(selectedSection) != null) {
@@ -119,33 +110,6 @@ public class ClientRendezvousPage extends JFrame {
                 for (Doctor doctor : section.getDoctorLinkedList()) {
                     doctorBox.addItem(doctor.getName() + " (" + doctor.getDiplomaId() + ")");
                 }
-//                for (Hospital hospital : crs.getHospitals().values()) {
-//                    for (int i = 0; i < hospitalBox.getItemCount(); ++i) {
-//                        if (hospitalBox.getItemAt(i) != null && hospital.getName().equals(hospitalBox.getItemAt(i))) {
-//                            for (Section section : hospital.getSectionLinkedList()) {
-//                                for (int j = 0; j < sectionBox.getItemCount(); ++j) {
-//                                    if (sectionBox.getItemAt(j) != null) {
-//                                        for (Doctor doctor : section.getDoctorLinkedList()) {
-//                                            boolean exists = false;
-//                                            for (int k = 0; k < doctorBox.getItemCount(); ++k) {
-//                                                if (doctorBox.getItemAt(i) != null && doctorBox.getItemAt(i).equals(doctor.getName())) {
-//                                                    exists = true;
-//                                                    break;
-//                                                }
-//                                            }
-//                                            if (!exists) {
-//                                                doctorBox.addItem(doctor.getName() + " (" + doctor.getDiplomaId() + ")");
-//                                            }
-//                                        }
-//                                        break;
-//                                    }
-//                                }
-//                            }
-//                            break;
-//                        }
-//                    }
-//
-//                }
             }
         });
 

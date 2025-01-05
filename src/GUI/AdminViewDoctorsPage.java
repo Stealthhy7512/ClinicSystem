@@ -15,7 +15,6 @@ public class AdminViewDoctorsPage extends JFrame {
         // Set up the frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(400, 400);
-        //this.setLayout(new BorderLayout()); // Use BorderLayout for simplicity
         this.setTitle("Doctors");
         this.setLayout(null);
         this.addWindowListener(new WindowAdapter() {

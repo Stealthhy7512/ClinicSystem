@@ -15,7 +15,6 @@ public class AdminViewSectionsPage extends JFrame {
         // Set up the frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(400, 400);
-        //this.setLayout(new BorderLayout()); // Use BorderLayout for simplicity
         this.setTitle("Sections");
         this.setLayout(null);
         this.addWindowListener(new WindowAdapter() {
@@ -40,16 +39,6 @@ public class AdminViewSectionsPage extends JFrame {
             this.add(buttons.get(i));
             ++i;
         }
-
-//        for (int i = 0; i < buttons.size(); ++i) {
-//            buttons.get(i).setBounds(10, 40*i + 5, 250, 40);
-//            buttons.get(i).setFocusable(false);
-//            buttons.get(i).addActionListener(e -> {
-//                //new AdminViewSectionsPage(this, )
-//                this.setVisible(false);
-//            });
-//            this.add(buttons.get(i));
-//        }
 
         // Set up back button
         back.setBounds(20, 300, 100, 50);
